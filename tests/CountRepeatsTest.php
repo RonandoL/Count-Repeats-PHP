@@ -56,13 +56,13 @@
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
             $word = "is";
-            $string = "is, word is";
+            $string = "is, word! !is 009 not IS ISS";
 
             //Act
             $result = $test_RepeatCounter->CountRepeats($word, $string);
 
             //Assert
-            $this->assertEquals(2, $result);
+            $this->assertEquals(3, $result);
         }
 
 

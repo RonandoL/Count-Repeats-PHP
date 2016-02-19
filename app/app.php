@@ -2,11 +2,6 @@
     require_once __DIR__."/../vendor/autoload.php";
     require_once __DIR__."/../src/RepeatCounter.php";
 
-    // session_start();
-    // if (empty($_SESSION['list_of_places'])) {
-    //     $_SESSION['list_of_places'] = array();
-    // }
-
     $app = new Silex\Application();
 
     $app->register(new Silex\Provider\TwigServiceProvider(), array(
@@ -17,7 +12,17 @@
 
     // Render Home Page
     $app->get("/", function() use ($app) {
-        return $app['twig']->render('example.html.twig'); //
+        return $app['twig']->render('repeatcounter.html.twig');
+    });
+
+    // User input form
+    $app->get("/userInput", function() use ($app) {
+        $newCount = new RepeatCounter;
+        $results = $newCount->CountRepeats($_GET['word'], $_GET['sentence']);
+        $word = $_GET['word'];
+        $sentence = $_GET['sentence'];
+
+        return $app['twig']->render('repeatcounter.html.twig', array('results' => $results, 'word' => $word, 'sentence' => $sentence));
     });
 
     return $app;

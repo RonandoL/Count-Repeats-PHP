@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/styles.css">
+        <title>Count Repeats</title>
+    </head>
+
+    <body>
+            <div class='jumbotron'>
+                <div class='container'>
+                    <h1>Count Repeats</h1>
+                    <p><em>This magic thingy will return how frequently a word appears in a given string you plug in, so...plug , plug, plug away.</em></p>
+                </div>
+            </div>
+
+        <div class='container'>
+            <!-- Row: 1 -->
+            <div class='row'>
+                <div class='col-sm-12'>
+                    <h2>Enter a word and a sentence, den push de bootun.</h2>
+
+                    <form action='/userInput'>
+                        <div class='form-group'>
+                            <label for='word'>Word: </label>
+                            <input id='word' name='word' type='text'>
+                        </div>
+
+                        <div class='form-group'>
+                            <label for='sentence'>Sentence:</label>
+                            <input id='sentence' name='sentence' type='text'>
+                        </div>
+
+                        <button class='btn btn-info' type='submit'>Submit!</button>
+                    </form>
+
+                </div>  <!-- /col-sm-6 -->
+            </div>  <!-- /Row -->
+
+    <!-- Results ----------------------------->
+            <!-- Row: 2 -->
+            <div class="row">
+                <div class="col-sm-12">
+                    {% if results is not empty %}
+                        <h3>YOUR WORD IS: <span class="damn">"{{ word }}</span>"</h3>
+                        <h3>YOUR LIST IS: <span class="damn">"{{ sentence }}</span>"</h3>
+                        <h1>THAT SHIT APPEARS EXACTLY <span class="damn biggie">{{ results }}</span> TIMES, YO!</h1>
+                    {% endif %}
+
+                </div><!--col-sm-6-->
+            </div><!--row-->
+        </div>  <!-- /Container  -->
+
+
+
+
+
+
+
+
+
+    </body>
+</html>
