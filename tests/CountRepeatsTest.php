@@ -1,26 +1,26 @@
 <?php
 
-    require_once "src/Example.php";
+    require_once "src/RepeatCounter.php";
 
-    class CountRepeatsTest extends PHPUnit_Framework_TestCase
+    class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_makeCountRepeats()
+        function test_makeRepeatCounter()
         {
             //Arrange
-            $test_Example = new CountRepeats;
-            $input = "beowulf";
+            $test_RepeatCounter = new RepeatCounter;
+            $word = "is";
+            $string = "is";
 
             //Act
-            $result = $test_CountRepeats->makeExample($input);
+            $result = $test_RepeatCounter->CountRepeats($word, $string);
 
             //Assert
-            $this->assertEquals("Beowulf", $result);
+            $this->assertEquals(1, $result);
         }
     }
 
     // Run in terminal in project folder
     // export PATH=$PATH:./vendor/bin
     // phpunit tests
-
 ?>

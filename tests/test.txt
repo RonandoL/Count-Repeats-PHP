@@ -1,0 +1,5 @@
+input:  "is" "is"
+    output: 1
+
+input:  "is" "is and is"
+    output: 2

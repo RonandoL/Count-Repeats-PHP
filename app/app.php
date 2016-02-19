@@ -1,6 +1,6 @@
 <?php
     require_once __DIR__."/../vendor/autoload.php";
-    require_once __DIR__."/../src/CountRepeats.php";
+    require_once __DIR__."/../src/RepeatCounter.php";
 
     // session_start();
     // if (empty($_SESSION['list_of_places'])) {
