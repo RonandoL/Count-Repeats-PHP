@@ -17,7 +17,7 @@
 
             foreach ($string_array as $string_word) {
                 if ($word == $string_word) {
-                    $count .= +1;
+                    $count += 1;
                 }
             }
 
