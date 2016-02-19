@@ -5,7 +5,7 @@
     class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        function test_makeRepeatCounter()
+        function test_makeRepeatCounter_oneWord()
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
@@ -17,6 +17,20 @@
 
             //Assert
             $this->assertEquals(1, $result);
+        }
+
+        function test_makeRepeatCounter_twiceInString()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
+            $word = "is";
+            $string = "is word is";
+
+            //Act
+            $result = $test_RepeatCounter->CountRepeats($word, $string);
+
+            //Assert
+            $this->assertEquals(2, $result);
         }
     }
 
