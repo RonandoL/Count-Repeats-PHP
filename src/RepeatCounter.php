@@ -12,11 +12,14 @@
 
         function CountRepeats($word, $string)
         {
-            $string_array = explode(" ", $string); // string -> array
+            // $clean_string_array = explode(" ", $string); // string -> array
+            $lower_string = strtolower($string);
+            $lower_string_array = explode(" ", $lower_string);
+            $word_lower = strtolower($word);
             $count = 0;
 
-            foreach ($string_array as $string_word) {
-                if ($word == $string_word) {
+            foreach ($lower_string_array as $string_word) {
+                if ($word_lower == $string_word) {
                     $count += 1;
                 }
             }

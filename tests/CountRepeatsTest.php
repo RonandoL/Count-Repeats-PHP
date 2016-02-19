@@ -40,8 +40,23 @@
         {
             //Arrange
             $test_RepeatCounter = new RepeatCounter;
+            $word = "Is";
+            $string = "Is word is not IS";
+
+            //Act
+            $result = $test_RepeatCounter->CountRepeats($word, $string);
+
+            //Assert
+            $this->assertEquals(3, $result);
+        }
+
+        // Handle case
+        function test_makeRepeatCounter_handlePunctuation()
+        {
+            //Arrange
+            $test_RepeatCounter = new RepeatCounter;
             $word = "is";
-            $string = "Is word is";
+            $string = "is, word is";
 
             //Act
             $result = $test_RepeatCounter->CountRepeats($word, $string);
