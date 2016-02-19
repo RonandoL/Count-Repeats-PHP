@@ -14,6 +14,7 @@
         {
             // $clean_string_array = explode(" ", $string); // string -> array
             $lower_string = strtolower($string);
+            $lower_string = preg_replace('/[^a-z\s]+/i', '', $lower_string);
             $lower_string_array = explode(" ", $lower_string);
             $word_lower = strtolower($word);
             $count = 0;

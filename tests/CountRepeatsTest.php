@@ -5,7 +5,7 @@
     class RepeatCounterTest extends PHPUnit_Framework_TestCase
     {
 
-        // count one word in string
+        // 1) count one word in string
         function test_makeRepeatCounter_oneWord()
         {
             //Arrange
@@ -20,7 +20,7 @@
             $this->assertEquals(1, $result);
         }
 
-        // count multiple words in string
+        // 2) count multiple words in string
         function test_makeRepeatCounter_twiceInString()
         {
             //Arrange
@@ -35,7 +35,7 @@
             $this->assertEquals(3, $result);
         }
 
-        // Handle case
+        // 3) Handle case
         function test_makeRepeatCounter_handleCase()
         {
             //Arrange
@@ -50,7 +50,7 @@
             $this->assertEquals(3, $result);
         }
 
-        // Handle case
+        // 4) Handle Punctuation
         function test_makeRepeatCounter_handlePunctuation()
         {
             //Arrange
